@@ -158,7 +158,7 @@ public class MyStack {
 		
 		ArrayList<Character> toStack = new ArrayList<>();
 		exp.chars().mapToObj( i-> (char)i )
-					.filter( c -> Character.isDigit(c) || c == '.' || c == '/' || c == '*' || c == '-' || c == '+')
+					.filter( c -> Character.isDigit(c) || isSign(c))
 						.forEach( c -> toStack.add(c) );	
 
 		int isSign = 0;
