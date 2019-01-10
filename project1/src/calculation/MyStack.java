@@ -95,9 +95,10 @@ public class MyStack {
 	//Do the step 2 here
 
 	public MyStack() {
-		total_stacks += 1;
+		total_stacks ++;
 		id = total_stacks;
 		System.out.println("A stack with the id # " + this.id + " is created.");
+		//System.out.println("total stacks = " + getTotal_stacks());
 	}
 	
 	public MyStack(String exp) {
@@ -158,60 +159,69 @@ public class MyStack {
 		
 		ArrayList<Character> toStack = new ArrayList<>();
 		exp.chars().mapToObj( i-> (char)i )
-					.filter( c -> Character.isDigit(c) || isSign(c))
+					.filter( c -> Character.isDigit(c) || isSign(c) || c == '.')
 						.forEach( c -> toStack.add(c) );	
 
 		int isSign = 0;
 		int wasSign = 0;
 		StringBuffer builder = new StringBuffer();
 		ArrayList<Character> sublist;
-		for(int i = 0; i < toStack.size(); i++) {
-			//System.out.println(i+" : "+toStack.get(i));
-			if(!(containSigns(toStack)))
-				{
-					for(char ch : toStack) {
-						builder.append(ch);
+		if(!(containSigns(toStack)))
+		{
+			for(char ch : toStack) {
+				builder.append(ch);
+			}
+			stack.push(builder.toString());	
+			//stack.push(String.valueOf(toStack.get(i)));
+			builder.setLength(0);
+		}
+		else {
+			for(int i = 0; i < toStack.size(); i++) {
+				//System.out.println(i+" : "+toStack.get(i));
+				if (isSign(toStack.get(i))) {
+					isSign = i;
+					// convert array list to sublists.
+					// assign them to a string buffer
+					// convert from string buffer to string
+					// add them to stack.
+					
+					if(wasSign <1) {
+						sublist = new ArrayList<>(toStack.subList(wasSign , isSign));
+						if(checkDecimalPts(sublist)) {
+							// to call a new function that will fix the decimal point bug.
+							processList(sublist);
+						}
+					}
+					else {
+						//System.out.println((wasSign+1)+","+(isSign));
+						sublist = new ArrayList<>(toStack.subList(wasSign+1 , isSign));
+						if(checkDecimalPts(sublist)) {
+							// to call a new function that will fix the decimal point bug.
+							processList(sublist);
+						}
+					}
+//					for(char c:sublist)
+//					{
+//						System.out.println("Sublist: "+c);
+//					}
+					
+					wasSign = isSign;
+					for(char ch : sublist) {
+						builder.append(String.valueOf(ch));
 					}
 					stack.push(builder.toString());	
-					//stack.push(String.valueOf(toStack.get(i)));
+					stack.push(String.valueOf(toStack.get(i)));
 					builder.setLength(0);
 				}
-			
-			if (isSign(toStack.get(i))) {
-				isSign = i;
-				// convert array list to sublists.
-				// assign them to a string buffer
-				// convert from string buffer to string
-				// add them to stack.
 				
-				if(wasSign <1) {
-					sublist = new ArrayList<>(toStack.subList(wasSign , isSign));
+				//end
+				if(i == toStack.size()-1 && isSign != i ) {
+					sublist = new ArrayList<>(toStack.subList(wasSign+1, i+1));
+					for(char ch : sublist) {
+						builder.append(String.valueOf(ch));
+					}
+					stack.push(builder.toString());
 				}
-				else {
-					System.out.println((wasSign+1)+","+(isSign));
-					sublist = new ArrayList<>(toStack.subList(wasSign+1 , isSign));
-				}
-				for(char c:sublist)
-				{
-					System.out.println("Sublist: "+c);
-				}
-				
-				wasSign = isSign;
-				for(char ch : sublist) {
-					builder.append(String.valueOf(ch));
-				}
-				stack.push(builder.toString());	
-				stack.push(String.valueOf(toStack.get(i)));
-				builder.setLength(0);
-			}
-			
-			//end
-			if(i == toStack.size()-1 && isSign != i ) {
-				sublist = new ArrayList<>(toStack.subList(wasSign+1, i+1));
-				for(char ch : sublist) {
-					builder.append(String.valueOf(ch));
-				}
-				stack.push(builder.toString());
 			}
 		}
 	}
@@ -232,4 +242,50 @@ public class MyStack {
 		
 		return subList;
 	}
+	public boolean checkDecimalPts(ArrayList<Character> sublist) {
+		int isPoint = 0;
+		for(char ch: sublist) {
+			if(ch == '.') {
+				isPoint++;
+			}
+			if(isPoint >1) {
+				return true;
+			}
+		}
+		return false;
+	}
+	public ArrayList<Character> processList(ArrayList<Character> subList){
+		int isPoint = 0;
+		//int wasPoint = 0;
+		int points = 0;
+		//List<Character> temp = List.of('+','0');
+		for(int i = 0; i < subList.size(); i++) {
+//			if (subList.get(i) == '.' && isSign(subList.get(i - 1)) && isSign(subList.get(i + 1))) {
+//				subList.remove(i);
+//			}
+			if(subList.get(i) == '.') {
+				isPoint = i;
+				points++;
+				if(points>1 && points < subList.size() && !(i == subList.size()-1 && isPoint == i )) {
+					subList.add(isPoint, '0');
+					subList.add(isPoint, '+');	
+					break;
+				}
+				if(i == subList.size()-1 && isPoint == i ) {
+					subList.remove(i);
+					continue;
+				}
+			}	
+		}
+
+	return subList;
+	}
+	public Stack<String> checkStack(Stack<String> finalStack){
+		Iterator<String> itr = finalStack.iterator();
+		while(itr.hasNext()) {
+			String element = itr.next();
+		}
+		return finalStack;
+	}		
 }
+	

@@ -16,12 +16,14 @@ public class Main {
 		//testing stacks[2]
 		System.out.println("***************** Case 1 **********************");
 		stacks[2].addItem("1");
+		System.out.println("total Stacks = " + stacks[2].getTotal_stacks());
 		System.out.println("stacks[2] has " + stacks[2].getSize() + " item(s)");
 		stacks[2].showItems();
 		
 		//testing s2
 		System.out.println("*****************  Case 2 **********************");
 		MyStack s2 = new MyStack("5 + 2 + 32 * 10");
+		System.out.println("total Stacks = " + s2.getTotal_stacks());
 		System.out.println("s2 has " + s2.getSize() + " item(s)");
 		s2.showItems();
 		ProcessStack.parseMyStack(s2);
@@ -31,6 +33,7 @@ public class Main {
 		//testing s3
 		System.out.println("****************** Case 3 *********************");
 		MyStack s3 = new MyStack("5+2+32*10");
+		System.out.println("total Stacks = " + s3.getTotal_stacks());
 		System.out.println("s3 has " + s3.getSize() + " item(s)");
 		s3.showItems();
 		
@@ -39,6 +42,7 @@ public class Main {
 		//testing s4
 		System.out.println("******************* Case 4 ********************");
 		MyStack s4 = new MyStack("d5 ~c+ 2$+a32*10b");
+		System.out.println("total Stacks = " + s4.getTotal_stacks());
 		System.out.println("s4 has " + s4.getSize() + " item(s)");
 		s4.showItems();
 		ProcessStack.parseMyStack(s4);
@@ -47,6 +51,7 @@ public class Main {
 		//testing s5
 		System.out.println("******************* Case 5 ********************");
 		MyStack s5 = new MyStack("d5.3. c+ 22.5^+a31.2*10b");
+		System.out.println("total Stacks = " + s5.getTotal_stacks());
 		System.out.println("s5 has " + s5.getSize() + " item(s)");
 		s5.showItems();
 		ProcessStack.parseMyStack(s5);
@@ -54,6 +59,7 @@ public class Main {
 		//testing s6
 		System.out.println("******************* Case 6 ********************");
 		MyStack s6 = new MyStack();
+		System.out.println("total Stacks = " + s6.getTotal_stacks());
 		s6.addItem("d5.3.6 c/0.215+ 22.5+a31.2*1%21b");
 		System.out.println("s6 has " + s6.getSize() + " item(s)");
 		s6.showItems();

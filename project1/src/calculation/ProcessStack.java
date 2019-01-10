@@ -92,7 +92,7 @@ public class ProcessStack {
 	
 	/*Step 5: implement the following function 
 	 * This is the most important function of this file. The description for this function
-	 * is already defined in the instructions. Basecially, you will check the stored item of 
+	 * is already defined in the instructions. Basically, you will check the stored item of 
 	 * the MyStack input parameter. There are three possible cases: empty expression, invalid expression,
 	 * and valid expression. If it is a valid expression, calculate it. According to the three
 	 * cases, return different messages.
