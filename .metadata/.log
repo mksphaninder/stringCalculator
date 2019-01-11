@@ -1,0 +1,275 @@
+!SESSION 2019-01-11 01:54:36.695 -----------------------------------------------
+eclipse.buildId=4.9.0.I20180906-0745
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+
+!ENTRY org.eclipse.osgi 4 0 2019-01-11 01:54:37.019
+!MESSAGE error loading hook: org.eclipse.equinox.weaving.hooks.WeavingHook
+!STACK 0
+java.lang.NoClassDefFoundError: org/eclipse/osgi/baseadaptor/HookConfigurator
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1007)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:174)
+	at java.base/java.net.URLClassLoader.defineClass(URLClassLoader.java:545)
+	at java.base/java.net.URLClassLoader.access$100(URLClassLoader.java:83)
+	at java.base/java.net.URLClassLoader$1.run(URLClassLoader.java:453)
+	at java.base/java.net.URLClassLoader$1.run(URLClassLoader.java:447)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:446)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:563)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:496)
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1007)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:174)
+	at java.base/java.net.URLClassLoader.defineClass(URLClassLoader.java:545)
+	at java.base/java.net.URLClassLoader.access$100(URLClassLoader.java:83)
+	at java.base/java.net.URLClassLoader$1.run(URLClassLoader.java:453)
+	at java.base/java.net.URLClassLoader$1.run(URLClassLoader.java:447)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:446)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:563)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:496)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:292)
+	at org.eclipse.osgi.internal.hookregistry.HookRegistry.loadConfigurators(HookRegistry.java:195)
+	at org.eclipse.osgi.internal.hookregistry.HookRegistry.initialize(HookRegistry.java:116)
+	at org.eclipse.osgi.internal.framework.EquinoxContainer.<init>(EquinoxContainer.java:70)
+	at org.eclipse.osgi.launch.Equinox.<init>(Equinox.java:34)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.startup(EclipseStarter.java:306)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:242)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+Caused by: java.lang.ClassNotFoundException: org.eclipse.osgi.baseadaptor.HookConfigurator
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:466)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:563)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:496)
+	... 37 more
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-01-11 01:54:54.889
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\mksph'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-01-11 09:58:03.212 -----------------------------------------------
+eclipse.buildId=4.9.0.I20180906-0745
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+
+!ENTRY org.eclipse.osgi 4 0 2019-01-11 09:58:03.638
+!MESSAGE error loading hook: org.eclipse.equinox.weaving.hooks.WeavingHook
+!STACK 0
+java.lang.NoClassDefFoundError: org/eclipse/osgi/baseadaptor/HookConfigurator
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1007)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:174)
+	at java.base/java.net.URLClassLoader.defineClass(URLClassLoader.java:545)
+	at java.base/java.net.URLClassLoader.access$100(URLClassLoader.java:83)
+	at java.base/java.net.URLClassLoader$1.run(URLClassLoader.java:453)
+	at java.base/java.net.URLClassLoader$1.run(URLClassLoader.java:447)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:446)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:563)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:496)
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1007)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:174)
+	at java.base/java.net.URLClassLoader.defineClass(URLClassLoader.java:545)
+	at java.base/java.net.URLClassLoader.access$100(URLClassLoader.java:83)
+	at java.base/java.net.URLClassLoader$1.run(URLClassLoader.java:453)
+	at java.base/java.net.URLClassLoader$1.run(URLClassLoader.java:447)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:446)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:563)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:496)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:292)
+	at org.eclipse.osgi.internal.hookregistry.HookRegistry.loadConfigurators(HookRegistry.java:195)
+	at org.eclipse.osgi.internal.hookregistry.HookRegistry.initialize(HookRegistry.java:116)
+	at org.eclipse.osgi.internal.framework.EquinoxContainer.<init>(EquinoxContainer.java:70)
+	at org.eclipse.osgi.launch.Equinox.<init>(Equinox.java:34)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.startup(EclipseStarter.java:306)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:242)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+Caused by: java.lang.ClassNotFoundException: org.eclipse.osgi.baseadaptor.HookConfigurator
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:466)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:563)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:496)
+	... 37 more
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-01-11 09:58:38.976
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\mksph'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2019-01-11 11:39:22.107 -----------------------------------------------
+eclipse.buildId=4.9.0.I20180906-0745
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+
+!ENTRY org.eclipse.osgi 4 0 2019-01-11 11:39:22.466
+!MESSAGE error loading hook: org.eclipse.equinox.weaving.hooks.WeavingHook
+!STACK 0
+java.lang.NoClassDefFoundError: org/eclipse/osgi/baseadaptor/HookConfigurator
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1007)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:174)
+	at java.base/java.net.URLClassLoader.defineClass(URLClassLoader.java:545)
+	at java.base/java.net.URLClassLoader.access$100(URLClassLoader.java:83)
+	at java.base/java.net.URLClassLoader$1.run(URLClassLoader.java:453)
+	at java.base/java.net.URLClassLoader$1.run(URLClassLoader.java:447)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:446)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:563)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:496)
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1007)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:174)
+	at java.base/java.net.URLClassLoader.defineClass(URLClassLoader.java:545)
+	at java.base/java.net.URLClassLoader.access$100(URLClassLoader.java:83)
+	at java.base/java.net.URLClassLoader$1.run(URLClassLoader.java:453)
+	at java.base/java.net.URLClassLoader$1.run(URLClassLoader.java:447)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:446)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:563)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:496)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:292)
+	at org.eclipse.osgi.internal.hookregistry.HookRegistry.loadConfigurators(HookRegistry.java:195)
+	at org.eclipse.osgi.internal.hookregistry.HookRegistry.initialize(HookRegistry.java:116)
+	at org.eclipse.osgi.internal.framework.EquinoxContainer.<init>(EquinoxContainer.java:70)
+	at org.eclipse.osgi.launch.Equinox.<init>(Equinox.java:34)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.startup(EclipseStarter.java:306)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:242)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+Caused by: java.lang.ClassNotFoundException: org.eclipse.osgi.baseadaptor.HookConfigurator
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:466)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:563)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:496)
+	... 37 more
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-01-11 11:39:38.479
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\mksph'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.core.resources 2 2 2019-01-11 13:56:55.494
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2019-01-11 13:56:55.494
+!MESSAGE The project description file (.project) for 'project1' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.eclipse.recommenders.coordinates.rcp 4 9 2019-01-11 13:59:07.242
+!MESSAGE Failed to write manual mappings to file ‘F:\JAVA\eclipse projects\java\stringCalculator\stringCalculator\.recommenders\caches\manual-mappings.json’.
+!STACK 0
+java.io.FileNotFoundException: F:\JAVA\eclipse projects\java\stringCalculator\stringCalculator\.recommenders\caches\manual-mappings.json (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:276)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:220)
+	at com.google.common.io.Files$FileByteSink.openStream(Files.java:245)
+	at com.google.common.io.Files$FileByteSink.openStream(Files.java:233)
+	at com.google.common.io.ByteSink$AsCharSink.openStream(ByteSink.java:158)
+	at com.google.common.io.CharSink.write(CharSink.java:105)
+	at com.google.common.io.Files.write(Files.java:489)
+	at org.eclipse.recommenders.internal.coordinates.rcp.ManualProjectCoordinateAdvisor.close(ManualProjectCoordinateAdvisor.java:102)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.recommenders.internal.rcp.RcpModule$Listener$1.executeMethod(RcpModule.java:292)
+	at org.eclipse.recommenders.internal.rcp.RcpModule$Listener$1.access$0(RcpModule.java:289)
+	at org.eclipse.recommenders.internal.rcp.RcpModule$Listener$1$1.postShutdown(RcpModule.java:308)
+	at org.eclipse.ui.internal.Workbench$4.run(Workbench.java:961)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.JFaceUtil.lambda$0(JFaceUtil.java:47)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:176)
+	at org.eclipse.ui.internal.Workbench.firePostShutdown(Workbench.java:958)
+	at org.eclipse.ui.internal.Workbench.shutdown(Workbench.java:2986)
+	at org.eclipse.ui.internal.Workbench.busyClose(Workbench.java:1151)
+	at org.eclipse.ui.internal.Workbench.lambda$4(Workbench.java:1400)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:72)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1400)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1373)
+	at org.eclipse.ui.internal.handlers.QuitHandler.execute(QuitHandler.java:46)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:294)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:96)
+	at jdk.internal.reflect.GeneratedMethodAccessor74.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:320)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:254)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:164)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:497)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:490)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:207)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerService.executeCommand(LegacyHandlerService.java:399)
+	at org.eclipse.ui.internal.actions.CommandAction.runWithEvent(CommandAction.java:154)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:568)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:400)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4145)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1055)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3958)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3561)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:628)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:199)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:391)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:246)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+
+!ENTRY org.eclipse.recommenders.coordinates.rcp 4 8 2019-01-11 13:59:07.247
+!MESSAGE Failed to write cached coordinates to file ‘F:\JAVA\eclipse projects\java\stringCalculator\stringCalculator\.recommenders\caches\identified-project-coordinates.json’.
+!STACK 0
+java.io.FileNotFoundException: F:\JAVA\eclipse projects\java\stringCalculator\stringCalculator\.recommenders\caches\identified-project-coordinates.json (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:276)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:220)
+	at com.google.common.io.Files$FileByteSink.openStream(Files.java:245)
+	at com.google.common.io.Files$FileByteSink.openStream(Files.java:233)
+	at com.google.common.io.ByteSink$AsCharSink.openStream(ByteSink.java:158)
+	at com.google.common.io.CharSink.write(CharSink.java:105)
+	at com.google.common.io.Files.write(Files.java:489)
+	at org.eclipse.recommenders.coordinates.rcp.EclipseProjectCoordinateAdvisorService.shutDown(EclipseProjectCoordinateAdvisorService.java:220)
+	at com.google.common.util.concurrent.AbstractIdleService$2$2.run(AbstractIdleService.java:69)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.base/java.lang.Thread.run(Thread.java:844)
