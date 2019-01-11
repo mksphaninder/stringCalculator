@@ -199,17 +199,17 @@ public class MyStack {
 							// to call a new function that will fix the decimal point bug.
 							processList(sublist);
 						}
-					}
-//					for(char c:sublist)
-//					{
-//						System.out.println("Sublist: "+c);
-//					}
-					
+					}					
 					wasSign = isSign;
 					for(char ch : sublist) {
 						builder.append(String.valueOf(ch));
 					}
-					stack.push(builder.toString());	
+					if(!(isValidString(builder.toString()))) {
+						stack.push(builder.toString());
+					}
+					else {
+						addItem(builder.toString());
+					}
 					stack.push(String.valueOf(toStack.get(i)));
 					builder.setLength(0);
 				}
@@ -286,6 +286,13 @@ public class MyStack {
 			String element = itr.next();
 		}
 		return finalStack;
-	}		
+	}
+	public boolean isValidString(String sublist) {
+		//before adding the string to the stack check is its a valid decimal digit without '+' sign.
+		for(int ind = 0 ; ind < sublist.length() ; ind++) {
+			if(sublist.charAt(ind) == '+')
+				return true;
+		}
+		return false;
+	}
 }
-	
