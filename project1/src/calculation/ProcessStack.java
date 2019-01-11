@@ -1,5 +1,9 @@
 package calculation;
 
+import java.util.Iterator;
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
 
 //This Message class is just to used as a return type to show whether the stored items of the stack
 //can be executable or valid. There are two data member involved, the first one "success" is
@@ -74,7 +78,7 @@ class Display{
 
 /*The most important class in this file, which is used to process */
 public class ProcessStack {
-
+	//private static ScriptEngine engine = new ScriptEngineManager().getEngineByName("JavaScript");
 	public ProcessStack()
 	{
 		
@@ -82,7 +86,7 @@ public class ProcessStack {
 	
 	
 	/*This method call the the calculate() and print out the corresponding message*/
-	public static void parseMyStack(MyStack s)
+	public static void parseMyStack(MyStack s) throws NumberFormatException, ScriptException
 	{
 		Message m = calculate(s);
 		Display.showMessage(m);
@@ -97,18 +101,36 @@ public class ProcessStack {
 	 * and valid expression. If it is a valid expression, calculate it. According to the three
 	 * cases, return different messages.
 	 * */
-	public static Message calculate(MyStack ms)
+	public static Message calculate(MyStack ms) throws NumberFormatException, ScriptException
 	{
+		final ScriptEngineManager engineManager = new ScriptEngineManager();
+		final ScriptEngine engine = engineManager.getEngineByName("JavaScript");
 		
 			Message c = new Message();
 		//if ms stores correct expression, return new Message(2, result);
 		//if ms has empty expression, return new Message(0, 0.0);
 		//if ms has invalid expression, return new Message(1, 0.0)
-			return c;
+			if(ms.getStack().empty()) {
+				return new Message(0,0.0);
+			}
+		// for every element in stack append the stack element into a new string
+		// from java math library call compute function
+		// it will return if the expression is valid or not.
+		// if valid it will return ans.
+			String exp = "";
+			Iterator<String> itr = ms.getStack().iterator();
+			while(itr.hasNext()) {
+				exp += itr.next();
+			}
+			System.out.println(exp);
+			try {
+				Object res = engine.eval(exp);
+				@SuppressWarnings("deprecation")
+				Double d1 = new Double(res.toString());
+				return new Message(2,d1);
+			}
+			catch(ScriptException e) {
+				return new Message(1,0.0);
+			}
 	}
-
-
-	
-	
-	
 }

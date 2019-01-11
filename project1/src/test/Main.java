@@ -1,11 +1,13 @@
 package test;
 
+import javax.script.ScriptException;
+
 import calculation.*;
 
 public class Main {
 
 	
-	public static void main(String[] args)
+	public static void main(String[] args) throws ScriptException
 	{
 		MyStack[] stacks = new MyStack[5];
 
@@ -74,7 +76,9 @@ public class Main {
 		s7.showItems();
 		s7.addItem("502 + 123 -- *0.5ba.5.7-");
 		s7.showItems();
+		ProcessStack.parseMyStack(s7);
 	    
+		System.out.println("******************* Case 8 ********************");
 		MyStack s8 = new MyStack("1-5+32-2");
 		s8.showItems();
 		ProcessStack.parseMyStack(s8);
